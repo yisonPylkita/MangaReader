@@ -1,5 +1,25 @@
+.favorite_manga {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MangaTile {
+    /* position: relative; */
+}
+
 .MangaTileCover {
-    display: block;
-    width: 120px;
-    height: 240px;
+    /* position: absolute; */
+    /* top: 0px;
+    left: 0px; */
+    /* width: 120px;
+    height: 240px; */
+}
+
+.MangaTileTitle {
+    /* position: absolute; */
+    /* bottom: 0px; */
+    /* left: 0px; */
+    /* width: 120px;
+    height: 20px; */
 }

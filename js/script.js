@@ -4,7 +4,7 @@ class MangaTile {
         this.cover_img = cover_img;
     }
 
-    toString1() {
+    toString() {
         return `<dev class="MangaTile">
             <dev class="MangaTileCover" style="background-image: url(${this.cover_img})"></div>
             <dev class="MangaTileTitle">${this.name}</div>
@@ -21,11 +21,11 @@ const fav_mangas_mock = [
 let renderFavPage = () => {
     const favs = document.getElementById('favorite_manga');
     for (const manga of fav_mangas_mock) {
-        favs.innerHTML += manga.toString1();
+        favs.innerHTML += manga.toString();
     }
 }
 
 window.onload = () => {
-    console.log('Helo there');
+    console.log('Hello there');
     renderFavPage();
 }
