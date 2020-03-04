@@ -1,25 +1,24 @@
 .favorite_manga {
-    width: 600px;
-    display: flex;
-    flex-wrap: wrap;
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .MangaTile {
-    /* position: relative; */
+    width: 120px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 180px 20px;
+
+    border: solid red 1px;
 }
 
 .MangaTileCover {
-    /* position: absolute; */
-    /* top: 0px;
-    left: 0px; */
-    /* width: 120px;
-    height: 240px; */
+    height: 180px;
+    width: 120px;
 }
 
 .MangaTileTitle {
-    /* position: absolute; */
-    /* bottom: 0px; */
-    /* left: 0px; */
-    /* width: 120px;
-    height: 20px; */
+    height: 20px;
+    text-align: center;
 }
