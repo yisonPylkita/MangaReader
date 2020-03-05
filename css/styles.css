@@ -1,21 +1,19 @@
-.favorite_manga {
-    /* position: absolute; */
+#favorite_manga {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .MangaTile {
-    width: 120px;
-    height: 200px;
+    width: 240px;
+    height: 320px;
     display: grid;
-    grid-template-rows: 180px 20px;
-
+    grid-template-rows: 300px 20px;
     border: solid red 1px;
 }
 
 .MangaTileCover {
-    height: 180px;
-    width: 120px;
+    height: 300px;
+    width: 240px;
 }
 
 .MangaTileTitle {

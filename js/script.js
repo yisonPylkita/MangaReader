@@ -29,8 +29,8 @@ const fav_mangas_mock = [
     new MangaTile('Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'),
 ]
 
-let renderFavPage = () => {
-    const favs = document.getElementById('favorite_manga');
+const renderFavPage = () => {
+    const favs = document.querySelector('#favorite_manga');
     for (const manga of fav_mangas_mock) {
         favs.innerHTML += manga.toString();
     }
