@@ -1,3 +1,5 @@
+'use strict';
+
 class MangaTile {
     constructor(name, cover_img) {
         this.name = name;
