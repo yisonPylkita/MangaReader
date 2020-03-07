@@ -1,49 +1,23 @@
 import { render, Component } from 'inferno';
+import { BrowserRouter, Route, Link } from 'inferno-router';
 import Logo from './logo';
 import './App.css';
-import {MangaTile} from './components/MangaTile';
+import { Favurites } from './routes/Favurites';
+import { Updates } from './routes/Updates';
+import { Home } from './routes/Home';
 
-const fav_mangas_mock = [
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-  ['Peerless Refiner', 'https://cdn1.mangafox.online/307/407/737/548/280/peerless-refiner.jpg'],
-  ['Hidan no Aria', 'https://cdn1.mangafox.online/119/131/088/136/610/2/hidan-no-aria.jpg'],
-  ['Flower War', 'https://cdn1.mangafox.online/114/720/144/776/314/2/flower-war.jpg'],
-]
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div id="favorite_manga">
-          {
-            fav_mangas_mock.map((manga_info) => {
-              return <MangaTile name={manga_info[0]} cover_img={manga_info[1]}/>
-            })
-          }
-        </div>
-      </div>
-    );
-  }
-}
-
-export default App;
+export const MangaReader = () => (
+  <BrowserRouter>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/favurites">Favurites</Link></li>
+        <li><Link to="/updates">Updates</Link></li>
+      </ul>
+      <hr />
+      <Route exact path="/" component={Home} />
+      <Route path="/favurites" component={Favurites} />
+      <Route path="/updates" component={Updates} />
+    </div>
+  </BrowserRouter>
+);

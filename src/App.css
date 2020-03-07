@@ -24,6 +24,7 @@
 }
 
 .MangaTileTitle {
+  width: 120px;
   height: 20px;
   text-align: center;
 }
