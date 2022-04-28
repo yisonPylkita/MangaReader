@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "name": "manga_reader",
+  "version": "0.1.0",
+  "description": "PWA for reading manga",
+  "main": "index.js",
+  "repository": "git@github.com:yisonPylkita/MangaReader.git",
+  "author": "Wojciech Bartnik <yisonPylkita@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}

@@ -22,3 +22,8 @@ yarn-error.log*
 
 *.orig
 package-lock.json
+
+# Parcel stuff
+/.parcel-cache
+/dist
+
